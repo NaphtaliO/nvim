@@ -62,6 +62,7 @@ vim.opt.rtp:prepend(lazypath)
 --
 --  You can also configure plugins after the setup call,
 --    as they will be available in your neovim runtime.
+
 require('lazy').setup({
   -- NOTE: First, some plugins that don't require any configuration
 
@@ -179,6 +180,11 @@ require('lazy').setup({
       'nvim-treesitter/nvim-treesitter-textobjects',
     },
     build = ':TSUpdate',
+  },
+
+  {
+    'dsznajder/vscode-es7-javascript-react-snippets',
+    build = 'yarn install --frozen-lockfile && yarn compile'
   },
 
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
